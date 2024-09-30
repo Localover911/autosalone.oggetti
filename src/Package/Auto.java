@@ -3,12 +3,21 @@ package Package;
 public class Auto {
     private String modello;
     private String marca;
-    private String prezzo;
+    private int prezzo;
 
     public Auto (){
         modello = "nessun modello";
         marca = "nessuna marca";
-        prezzo = "nessun prezzo";
+        prezzo = 0;
+    }
+    public Auto (String mrc, String mdl, int prz){
+        marca = mrc;
+        modello = mdl;
+        if (prz < 0){
+        }
+        else {
+            prezzo = prz;
+        }
     }
 
     public void setModello (String mdl){
@@ -17,14 +26,22 @@ public class Auto {
     public void setMarca (String mrc){
         marca = mrc;
     }
-    public void setPrezzo (String prz){
-        prezzo = prz;
+    public void setPrezzo (int prz){
+        if (prz < 0){
+        }
+        else {
+            prezzo = prz;
+        }
     }
 
-    public void setAll (String mrc, String mdl, String prz){
+    public void setAll (String mrc, String mdl, int prz){
         marca = mrc;
         modello = mdl;
-        prezzo = prz;
+        if (prz < 0){
+        }
+        else {
+            prezzo = prz;
+        }
     }
 
     public String getModello (){
@@ -33,7 +50,7 @@ public class Auto {
     public String getMarca (){
         return marca;
     }
-    public String getPrezzo (){
+    public int getPrezzo (){
         return prezzo;
     }
 

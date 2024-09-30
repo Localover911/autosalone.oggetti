@@ -4,16 +4,10 @@ import java.util.Scanner;
 public class Main {
     public static void main (String [] args) {
         Scanner in = new Scanner(System.in);
-        Auto a1 = new Auto();
-        Auto a2 = new Auto();
-        Auto a3 = new Auto();
-        Auto a4 = new Auto();
-
-        a1.setAll("audi", "r8", "170.000");
-        a2.setAll("audi", "TT", "55.000");
-        a3.setAll("opel", "corsa", "15.000");
-        a4.setAll("lamborghini", "murcielago", "200.000");
-
+        Auto a1 = new Auto("audi", "r8", -170000);
+        Auto a2 = new Auto("audi", "TT", 55000);
+        Auto a3 = new Auto("opel", "corsa", 15000);
+        Auto a4 = new Auto("lamborghini", "murcielago", 200000);
 
 
         System.out.println(a1.getMarca()+ " " + a1.getModello() + " " + a1.getPrezzo());
