@@ -5,10 +5,10 @@ public class Auto {
     private String marca;
     private String prezzo;
 
-    public Auto (String mrc, String mdl, String prz){
-        modello = mdl;
-        marca = mrc;
-        prezzo = prz;
+    public Auto (){
+        modello = "nessun modello";
+        marca = "nessuna marca";
+        prezzo = "nessun prezzo";
     }
 
     public void setModello (String mdl){
@@ -18,6 +18,12 @@ public class Auto {
         marca = mrc;
     }
     public void setPrezzo (String prz){
+        prezzo = prz;
+    }
+
+    public void setAll (String mrc, String mdl, String prz){
+        marca = mrc;
+        modello = mdl;
         prezzo = prz;
     }
 
